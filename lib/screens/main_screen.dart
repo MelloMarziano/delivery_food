@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/controllers/main_controller.dart';
@@ -19,7 +21,7 @@ class MainScreen extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/back.jpeg'),
+              image: const AssetImage('assets/images/back.jpeg'),
               colorFilter: ColorFilter.mode(
                 Colors.black.withOpacity(0.4),
                 BlendMode.darken,
@@ -32,7 +34,7 @@ class MainScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset('assets/images/logo.png'),
-              Spacer(),
+              const Spacer(),
               Text(
                 'Passionate about burger?',
                 style: TextStyle(
