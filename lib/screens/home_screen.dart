@@ -17,15 +17,16 @@ class HomeScreen extends StatelessWidget {
       builder: (_) => Scaffold(
         appBar: AppBar(
           centerTitle: true,
+          automaticallyImplyLeading: false,
           elevation: 0,
-          backgroundColor: Color(0xFF000000),
+          backgroundColor: const Color(0xFF000000),
           title: Text(
             'Jaime App.',
             style: GoogleFonts.poppins(
               textStyle: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 20,
+                fontSize: 20.sp,
               ),
             ),
           ),
@@ -40,19 +41,19 @@ class HomeScreen extends StatelessWidget {
                 child: Badge(
                   child: Icon(
                     Icons.shopping_cart,
-                    size: 32,
+                    size: 32.sp,
                     color: Colors.white,
                   ), //icon style
                   badgeContent: SizedBox(
-                    width: 18,
-                    height: 18, //badge size
+                    width: 18.w,
+                    height: 18.h, //badge size
                     child: Center(
                       //aligh badge content to center
                       child: Text(
                         "3",
                         style: TextStyle(
                           color: Colors.white, //badge font color
-                          fontSize: 15, //badge font size
+                          fontSize: 15.sp, //badge font size
                         ),
                       ),
                     ),

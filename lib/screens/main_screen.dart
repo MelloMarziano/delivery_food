@@ -70,7 +70,7 @@ class MainScreen extends StatelessWidget {
                   backgroundColor: const Color(0xFFed9423),
                   fixedSize: Size(349.w, 54.h),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
+                    borderRadius: BorderRadius.circular(30.r),
                   ),
                 ),
                 child: Text(

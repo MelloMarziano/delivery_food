@@ -1,6 +1,13 @@
+// ignore_for_file: use_key_in_widget_constructors
+
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/controllers/home_controller.dart';
+import 'package:food_delivery/routes/app_routes.dart';
+import 'package:food_delivery/widgets/product_detail.dart';
+import 'package:food_delivery/widgets/toggled_buttom.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -9,14 +16,76 @@ class DetailScreen extends StatelessWidget {
     return GetBuilder<HomeController>(
       init: HomeController(),
       builder: (_) => Scaffold(
-        backgroundColor: Color(0xFFFFF1E5),
+        backgroundColor: const Color(0xFFFFF1E5),
         body: SingleChildScrollView(
           child: Column(
             children: [
               Container(
+                padding: EdgeInsets.only(top: 50.h, right: 15.w, left: 15.w),
                 height: MediaQuery.of(context).size.height * 0.4,
                 width: MediaQuery.of(context).size.width * 1,
-                color: Color(0xFFFFF1E5),
+                color: const Color(0xFFFFF1E5),
+                child: Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Get.toNamed(AppRoutes.HOME);
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 40.h,
+                            width: 40.w,
+                            decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: const Icon(Icons.arrow_back_ios),
+                          ),
+                        ),
+                        GestureDetector(
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 40.h,
+                            width: 40.w,
+                            decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: const Icon(Icons.favorite_border_outlined),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    CarouselSlider.builder(
+                      itemCount: 15,
+                      itemBuilder: (BuildContext context, int itemIndex,
+                          int pageViewIndex) {
+                        return Container(
+                          height: 100.h,
+                          width: 600.w,
+                          child: Image.asset('assets/images/chimi2.png'),
+                        );
+                      },
+                      options: CarouselOptions(
+                          autoPlay: true,
+                          enlargeCenterPage: true,
+                          viewportFraction: 0.8,
+                          aspectRatio: 1.9,
+                          initialPage: 2,
+                          autoPlayInterval: Duration(seconds: 20),
+                          autoPlayAnimationDuration:
+                              Duration(milliseconds: 2000),
+                          autoPlayCurve: Curves.fastOutSlowIn),
+                    )
+                  ],
+                ),
               ),
               Container(
                 height: MediaQuery.of(context).size.height * 0.6,
@@ -26,7 +95,7 @@ class DetailScreen extends StatelessWidget {
                   vertical: 30.h,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(25.r),
                     topRight: Radius.circular(25.r),
@@ -44,6 +113,8 @@ class DetailScreen extends StatelessWidget {
                   ],
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  //mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,9 +123,9 @@ class DetailScreen extends StatelessWidget {
                         Text(
                           'Chicken burger',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 22,
+                            fontSize: 24.sp,
                           ),
                         ),
                         Row(
@@ -62,23 +133,30 @@ class DetailScreen extends StatelessWidget {
                           children: [
                             const Icon(
                               Icons.star_border,
-                              color: Colors.black,
+                              color: Colors.white,
                             ),
                             SizedBox(
                               width: 3.w,
                             ),
-                            Text(
+                            const Text(
                               '0.0',
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                           ],
                         ),
                       ],
                     ),
+                    ToggledButton(
+                      name: 'Burger',
+                      widthWidget: 123,
+                      isSelect: false,
+                      iconText: '🍔',
+                      function: () {},
+                    ),
                     SizedBox(
-                      height: 30.h,
+                      height: 20.h,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -89,14 +167,14 @@ class DetailScreen extends StatelessWidget {
                           style: TextStyle(
                             color: const Color(0xFFFF9431),
                             fontWeight: FontWeight.bold,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                           ),
                         ),
                         Container(
                           height: 34.h,
                           padding: EdgeInsets.all(3),
                           decoration: BoxDecoration(
-                            color: Color(0xFFFFF1E5),
+                            color: const Color(0xFFFFF1E5),
                             borderRadius: BorderRadius.circular(50.r),
                           ),
                           child: Row(
@@ -111,7 +189,7 @@ class DetailScreen extends StatelessWidget {
                                     color: const Color(0xFFFF9431),
                                     borderRadius: BorderRadius.circular(50.r),
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.remove,
                                     color: Colors.white,
                                   ),
@@ -125,7 +203,7 @@ class DetailScreen extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 18,
+                                  fontSize: 18.sp,
                                 ),
                               ),
                               SizedBox(
@@ -140,7 +218,7 @@ class DetailScreen extends StatelessWidget {
                                     color: const Color(0xFFFF9431),
                                     borderRadius: BorderRadius.circular(100.r),
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.add,
                                     color: Colors.white,
                                   ),
@@ -152,121 +230,63 @@ class DetailScreen extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 20.h,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          width: 94.w,
-                          height: 64.h,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: const Color(0xFFFF9431),
-                            ),
-                            borderRadius: BorderRadius.circular(10.r),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Size',
-                                style: TextStyle(
-                                  color: Color(0xFFFF9431),
-                                ),
-                              ),
-                              Text(
-                                'Medium',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.sp,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          width: 94.w,
-                          height: 64.h,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: const Color(0xFFFF9431),
-                            ),
-                            borderRadius: BorderRadius.circular(10.r),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Energy',
-                                style: TextStyle(
-                                  color: Color(0xFFFF9431),
-                                ),
-                              ),
-                              Text(
-                                '554 KCal',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.sp,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          width: 94.w,
-                          height: 64.h,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: const Color(0xFFFF9431),
-                            ),
-                            borderRadius: BorderRadius.circular(10.r),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Delivery',
-                                style: TextStyle(
-                                  color: Color(0xFFFF9431),
-                                ),
-                              ),
-                              Text(
-                                '45 min.',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.sp,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                      children: const [
+                        ProductDetail(typeName: 'Size', description: 'Medium'),
+                        ProductDetail(
+                            typeName: 'Energy', description: '554 KCal'),
+                        ProductDetail(
+                            typeName: 'Delivery', description: '45 min'),
                       ],
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 20.h,
                     ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
+                    Text(
+                      'Descripcion',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16.sp,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                      "Suspendisse efficitur efficitur sapien nec bibendum. "
+                      "Maecenas fringilla quam eu volutpat pulvinar. Nulla facilisi. "
+                      "Quisque quam nisl.",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    SizedBox(
+                      height: 40.h,
+                    ),
+                    Center(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: TextButton.styleFrom(
                           backgroundColor: const Color(0xFFFF9431),
-                          fixedSize: Size(300, 52)),
-                      child: Text(
-                        'Agregar al carrito',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fixedSize: Size(300.w, 52.h),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.r),
+                          ),
+                        ),
+                        child: Text(
+                          'Agregar al carrito',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.sp,
+                          ),
                         ),
                       ),
                     ),
