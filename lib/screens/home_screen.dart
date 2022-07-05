@@ -1,3 +1,5 @@
+import 'package:badges/badges.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/controllers/home_controller.dart';
@@ -27,6 +29,39 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          actions: [
+            GestureDetector(
+              onTap: () {},
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  right: 20,
+                  top: 15,
+                ),
+                child: Badge(
+                  child: Icon(
+                    Icons.shopping_cart,
+                    size: 32,
+                    color: Colors.white,
+                  ), //icon style
+                  badgeContent: SizedBox(
+                    width: 18,
+                    height: 18, //badge size
+                    child: Center(
+                      //aligh badge content to center
+                      child: Text(
+                        "3",
+                        style: TextStyle(
+                          color: Colors.white, //badge font color
+                          fontSize: 15, //badge font size
+                        ),
+                      ),
+                    ),
+                  ),
+                  badgeColor: const Color(0xFFFF9431), //badge background color
+                ),
+              ),
+            )
+          ],
         ),
         body: Container(
           height: MediaQuery.of(context).size.height * 1,
@@ -42,25 +77,41 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Ordena aqui',
-                  style: GoogleFonts.nunito(
-                    textStyle: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 28.sp,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Ordena aqui',
+                          style: GoogleFonts.nunito(
+                            textStyle: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 28.sp,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          'Delivery!',
+                          style: GoogleFonts.nunito(
+                            textStyle: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 20.sp,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                ),
-                Text(
-                  'Delivery!',
-                  style: GoogleFonts.nunito(
-                    textStyle: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 20.sp,
+                    Image.asset(
+                      'assets/images/delivery.png',
+                      width: 100,
+                      height: 100,
                     ),
-                  ),
+                  ],
                 ),
                 SizedBox(
                   height: 20.h,

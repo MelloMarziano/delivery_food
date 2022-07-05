@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/routes/app_routes.dart';
+import 'package:get/get.dart';
 
 class CardContentFood extends StatelessWidget {
   const CardContentFood({Key? key}) : super(key: key);
@@ -56,26 +58,27 @@ class CardContentFood extends StatelessWidget {
                   children: [
                     const Icon(
                       Icons.star_border,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                     SizedBox(
-                      width: 5.w,
+                      width: 3.w,
                     ),
                     Text(
                       '0.0',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                     ),
                   ],
                 ),
                 Container(
-                    height: 90,
-                    width: 100,
-                    child: Image.asset(
-                      'assets/images/chimi2.png',
-                      fit: BoxFit.cover,
-                    )),
+                  height: 90,
+                  width: 100,
+                  child: Image.asset(
+                    'assets/images/chimi2.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 Text(
                   'Chicken burger',
                   style: TextStyle(
@@ -97,13 +100,17 @@ class CardContentFood extends StatelessWidget {
                     Text(
                       '\$ 22.00',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: const Color(0xFFFF9431),
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 17,
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Get.toNamed(
+                          AppRoutes.DETAIL,
+                        );
+                      },
                       child: Container(
                         height: 32,
                         width: 32,
@@ -113,7 +120,7 @@ class CardContentFood extends StatelessWidget {
                         ),
                         child: const Icon(
                           Icons.add,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                       ),
                     ),

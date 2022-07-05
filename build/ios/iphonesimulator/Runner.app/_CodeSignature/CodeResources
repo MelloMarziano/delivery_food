@@ -110,7 +110,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		6o2MB26qTlwaOrA4hWVfkX4YGzo=
+		qTgSy+SFkXsO+Q6gxBLJ5N+zUjM=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -118,11 +118,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		8IW3jN6MtsLhX/pEyteGVR5h2HU=
+		6/7IxudkC1F7M5W+MhaZhg2CXsk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		LNqsCdjooqqnbPKeF45OLNvhezU=
+		c96dMGgkk6a0ZAAfiwHLCm4oNEg=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		wAPm6xvMudWiCIac52l/NPOFwck=
+		Fyh6JnbXcQddYeI0mMGomcTP+n0=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/Home.png</key>
 		<data>
@@ -152,6 +152,10 @@
 		<data>
 		3nY7Us+wiVwFtIJSVW/nT4H62jo=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/delivery.png</key>
+		<data>
+		F0MtFTY6vYPt9hZ9sQW3Sra7vB0=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/download.jpeg</key>
 		<data>
 		+WBMPzBdgUt0ssrmAK+f/OuepOA=
@@ -170,7 +174,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		DI/GDwUI2VU3hsYepppou7YhN30=
+		2M9hH4K4YyHeXr1ngwOxvM4pQds=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -278,7 +282,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+GgS/BndxzSVUc7siqWEQuw8svg=
+		I2YNCN3HyAjsyKhAfrK1I2+G3AA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -577,11 +581,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6o2MB26qTlwaOrA4hWVfkX4YGzo=
+			qTgSy+SFkXsO+Q6gxBLJ5N+zUjM=
 			</data>
 			<key>hash2</key>
 			<data>
-			VbwGh/Qug5Hm0NXKK4V26IXCtkh1TjMaHt9JHrFg3C4=
+			fhI6vzcD2PbmchgiUXcUMc5SYx46YCaglF9jyE5rhtU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -599,22 +603,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8IW3jN6MtsLhX/pEyteGVR5h2HU=
+			6/7IxudkC1F7M5W+MhaZhg2CXsk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4PKVYnxHpGHvE0OPmYRC5xIpEMw6WBcQIKoF3jZNNls=
+			MJCqv5MFSzzC+XUMEXSlAFlGtLOlNnmliDTAPax0Mgw=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LNqsCdjooqqnbPKeF45OLNvhezU=
+			c96dMGgkk6a0ZAAfiwHLCm4oNEg=
 			</data>
 			<key>hash2</key>
 			<data>
-			vkByU3FzPsg1UfjPzfQoX/bVCYUqn5WgA5iZMGeqfhU=
+			tXgbBfrQtm4R3YY0zlJXFsW9WEXfk8FRNLtr8brUp2I=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -632,11 +636,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wAPm6xvMudWiCIac52l/NPOFwck=
+			Fyh6JnbXcQddYeI0mMGomcTP+n0=
 			</data>
 			<key>hash2</key>
 			<data>
-			hWRAsphLtblCirquq0+Bnrhj7apgS+QcAUicLZlNkZ4=
+			eZmQ4OZoCM8STN0vaYiR+zrYXNMaIdeC4S5HuHRSqWU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/Home.png</key>
@@ -694,6 +698,17 @@
 			fbelInSwhqFiww3bWSD+YjKL/HzRuYmeq5IKMO9dIWE=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/delivery.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			F0MtFTY6vYPt9hZ9sQW3Sra7vB0=
+			</data>
+			<key>hash2</key>
+			<data>
+			FTUEz3AE14lS5f6wstUajH2cMsIXOtDcMJIgbh6g23Y=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/download.jpeg</key>
 		<dict>
 			<key>hash</key>
@@ -742,11 +757,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DI/GDwUI2VU3hsYepppou7YhN30=
+			2M9hH4K4YyHeXr1ngwOxvM4pQds=
 			</data>
 			<key>hash2</key>
 			<data>
-			dHc3U3kKp8BWW7nPoARIr6O4nnm8udwCE4hQSYcx6uo=
+			EgkNqpF1JGaV/W+77kI6JDsh9hoM9kmYiclv11ThnIE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
