@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:badges/badges.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -78,39 +79,51 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Stack(
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(
-                          'Ordena aqui',
-                          style: GoogleFonts.nunito(
-                            textStyle: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w900,
-                              fontSize: 28.sp,
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Ordena aqui',
+                              style: GoogleFonts.nunito(
+                                textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 28.sp,
+                                ),
+                              ),
                             ),
-                          ),
+                            Text(
+                              'Delivery!',
+                              style: GoogleFonts.nunito(
+                                textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 20.sp,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          'Delivery!',
-                          style: GoogleFonts.nunito(
-                            textStyle: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w900,
-                              fontSize: 20.sp,
+                        SlideInLeft(
+                          //controller: AnimationController.unbounded(vsync: vsync),
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 10, top: 2),
+                            child: Image.asset(
+                              'assets/images/motorcito.png',
+                              width: 105,
+                              height: 90,
+                              fit: BoxFit.cover,
                             ),
                           ),
                         ),
                       ],
-                    ),
-                    Image.asset(
-                      'assets/images/delivery.png',
-                      width: 100,
-                      height: 100,
                     ),
                   ],
                 ),
