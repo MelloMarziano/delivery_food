@@ -25,7 +25,7 @@ class CartPage extends StatelessWidget {
                 children: [
                   Text(
                     'Tu pedido',
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.nunito(
                       textStyle: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -67,7 +67,7 @@ class CartPage extends StatelessWidget {
                               children: [
                                 Text(
                                   'Eliu Ortega',
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.nunito(
                                     textStyle: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -77,7 +77,7 @@ class CartPage extends StatelessWidget {
                                 ),
                                 Text(
                                   'Calle Trinitaria #50',
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.nunito(
                                     textStyle: TextStyle(
                                       color: Colors.black,
                                       //fontWeight: FontWeight.bold,
@@ -87,7 +87,7 @@ class CartPage extends StatelessWidget {
                                 ),
                                 Text(
                                   'Las casitas',
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.nunito(
                                     textStyle: TextStyle(
                                       color: Colors.black,
                                       //fontWeight: FontWeight.bold,
@@ -101,7 +101,7 @@ class CartPage extends StatelessWidget {
                             GestureDetector(
                               child: Text(
                                 'Editar',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.nunito(
                                   textStyle: TextStyle(
                                     color: Colors.blue,
                                     //fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class CartPage extends StatelessWidget {
                               children: [
                                 Text(
                                   '+1 829 504 1616',
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.nunito(
                                     textStyle: TextStyle(
                                       color: Colors.black,
                                       //fontWeight: FontWeight.bold,
@@ -143,7 +143,7 @@ class CartPage extends StatelessWidget {
                             GestureDetector(
                               child: Text(
                                 'Editar',
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.nunito(
                                   textStyle: TextStyle(
                                     color: Colors.blue,
                                     //fontWeight: FontWeight.bold,
@@ -172,7 +172,7 @@ class CartPage extends StatelessWidget {
                       ),
                       child: Text(
                         'Realizar pedido',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.nunito(
                           textStyle: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

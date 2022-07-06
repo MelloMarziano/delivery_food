@@ -1,13 +1,14 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/controllers/home_controller.dart';
 import 'package:food_delivery/routes/app_routes.dart';
 import 'package:food_delivery/widgets/card_food_content.dart';
+import 'package:food_delivery/widgets/custom_painter.dart';
+import 'package:food_delivery/widgets/ticket_detail.dart';
 import 'package:food_delivery/widgets/toggled_buttom.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icon_badge/icon_badge.dart';
 
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: const Color(0xFF21242B),
           title: Text(
             'Jaime App.',
-            style: GoogleFonts.poppins(
+            style: GoogleFonts.nunito(
               textStyle: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -34,8 +35,10 @@ class HomeScreen extends StatelessWidget {
           ),
           actions: [
             IconButton(
-              onPressed: () {},
-              icon: Icon(
+              onPressed: () {
+                _showTickectModal(context);
+              },
+              icon: const Icon(
                 Icons.history,
               ),
             ),
@@ -216,6 +219,22 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  void _showTickectModal(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const TicketDetail(
+          clientName: 'Eliu Ortega',
+          fechaCreacion: '06-07-2022',
+          orderNumber: '-JiGh_31GA20JabpZBfa',
+          orderTotal: 'RD\$ 400.00',
+          estimateOrderTime: '45 Min.',
+          orderStatus: 'En camino',
+        );
+      },
     );
   }
 }
