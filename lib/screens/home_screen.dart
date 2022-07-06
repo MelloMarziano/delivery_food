@@ -1,14 +1,15 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:badges/badges.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/controllers/home_controller.dart';
-import 'package:food_delivery/controllers/main_controller.dart';
+import 'package:food_delivery/routes/app_routes.dart';
 import 'package:food_delivery/widgets/card_food_content.dart';
 import 'package:food_delivery/widgets/toggled_buttom.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:icon_badge/icon_badge.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           centerTitle: true,
           automaticallyImplyLeading: false,
           elevation: 0,
-          backgroundColor: const Color(0xFF000000),
+          backgroundColor: const Color(0xFF21242B),
           title: Text(
             'Jaime App.',
             style: GoogleFonts.poppins(
@@ -32,37 +33,22 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           actions: [
-            GestureDetector(
-              onTap: () {},
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  right: 20,
-                  top: 15,
-                ),
-                child: Badge(
-                  child: Icon(
-                    Icons.shopping_cart,
-                    size: 32.sp,
-                    color: Colors.white,
-                  ), //icon style
-                  badgeContent: SizedBox(
-                    width: 18.w,
-                    height: 18.h, //badge size
-                    child: Center(
-                      //aligh badge content to center
-                      child: Text(
-                        "3",
-                        style: TextStyle(
-                          color: Colors.white, //badge font color
-                          fontSize: 15.sp, //badge font size
-                        ),
-                      ),
-                    ),
-                  ),
-                  badgeColor: const Color(0xFFFF9431), //badge background color
-                ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.history,
               ),
-            )
+            ),
+            IconBadge(
+              icon: Icon(Icons.shopping_cart),
+              itemCount: 3,
+              badgeColor: Colors.red,
+              itemColor: Colors.white,
+              hideZero: true,
+              onTap: () {
+                Get.offAllNamed(AppRoutes.CARTPAGE);
+              },
+            ),
           ],
         ),
         body: Container(
@@ -73,7 +59,7 @@ class HomeScreen extends StatelessWidget {
             left: 10.w,
             right: 10.w,
           ),
-          color: const Color(0xFF000000),
+          color: const Color(0xFF21242B),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,

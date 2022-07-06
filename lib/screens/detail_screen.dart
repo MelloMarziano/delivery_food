@@ -31,31 +31,18 @@ class DetailScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        GestureDetector(
-                          onTap: () {
-                            Get.toNamed(AppRoutes.HOME);
-                          },
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 40.h,
-                            width: 40.w,
-                            decoration: BoxDecoration(
-                              border: Border.all(),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: const Icon(Icons.arrow_back_ios),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                            color: const Color(0xFFFF9431),
                           ),
                         ),
-                        GestureDetector(
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 40.h,
-                            width: 40.w,
-                            decoration: BoxDecoration(
-                              border: Border.all(),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: const Icon(Icons.favorite_border_outlined),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.favorite_border_outlined,
+                            color: const Color(0xFFFF9431),
                           ),
                         ),
                       ],
@@ -102,7 +89,7 @@ class DetailScreen extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
+                      color: Colors.grey.withOpacity(0.2),
                       spreadRadius: 1,
                       blurRadius: 8,
                       offset: const Offset(
@@ -268,7 +255,7 @@ class DetailScreen extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                     SizedBox(
-                      height: 40.h,
+                      height: 30.h,
                     ),
                     Center(
                       child: ElevatedButton(
