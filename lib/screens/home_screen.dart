@@ -229,7 +229,7 @@ class HomeScreen extends StatelessWidget {
         return const TicketDetail(
           clientName: 'Eliu Ortega',
           fechaCreacion: '06-07-2022',
-          orderNumber: '-JiGh_31GA20JabpZBfa',
+          orderNumber: '00001',
           orderTotal: 'RD\$ 400.00',
           estimateOrderTime: '45 Min.',
           orderStatus: 'En camino',

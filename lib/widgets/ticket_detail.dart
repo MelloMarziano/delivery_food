@@ -59,7 +59,7 @@ class TicketDetail extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 15.h,
+                    height: 5.h,
                   ),
                   Text(
                     'Ticket',
@@ -72,7 +72,7 @@ class TicketDetail extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 15.h,
+                    height: 5.h,
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -133,7 +133,7 @@ class TicketDetail extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 15.h,
+                    height: 5.h,
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -194,7 +194,7 @@ class TicketDetail extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 15.h,
+                    height: 5.h,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -225,19 +225,6 @@ class TicketDetail extends StatelessWidget {
                   SizedBox(
                     height: 25.h,
                   ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Text(
-                      "™ Un Sitio Pa' Come 2022",
-                      style: GoogleFonts.nunito(
-                        textStyle: TextStyle(
-                          color: Colors.orange,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16.sp,
-                        ),
-                      ),
-                    ),
-                  )
                 ],
               ),
             ),

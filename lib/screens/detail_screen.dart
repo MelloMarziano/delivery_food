@@ -32,7 +32,9 @@ class DetailScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.offAndToNamed(AppRoutes.HOME);
+                          },
                           icon: const Icon(
                             Icons.arrow_back_ios,
                             color: const Color(0xFFFF9431),
